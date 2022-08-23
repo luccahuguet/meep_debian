@@ -1,0 +1,17 @@
+
+TODO:
+- Pegar ponto na frequencia e no tempo
+
+
+eps_data = sim.get_array(center=mp.Vector3(), size=cell, component=mp.Dielectric)
+plt.figure()
+plt.imshow(eps_data.transpose(), interpolation="spline36", cmap="binary")
+plt.axis("on")
+plt.savefig("waveguide_Dielectric.png")
+
+ey_data = sim.get_array(center=mp.Vector3(), size=cell, component=mp.Ey)
+plt.figure()
+plt.imshow(eps_data.transpose(), interpolation="spline36", cmap="binary")
+plt.imshow(ey_data.transpose(), interpolation="spline36", cmap="RdBu", alpha=0.9)
+plt.axis("on")
+plt.savefig("waveguide_ey.png")
